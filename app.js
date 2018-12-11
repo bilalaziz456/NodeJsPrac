@@ -1,18 +1,9 @@
-function greet(){
-    console.log("hello");
+var person = {
+    firstname : 'John',
+    lastname : 'Doe',
+    greet : function(){
+        console.log("Hello " + this.firstname + " " + this.lastname);
+    }
 }
-greet();
-function logGreet(fn){
-    fn();
-}
-logGreet(greet);
 
-var a = function(){
-    console.log("hellow world")
-}
-logGreet(a);
-
-logGreet(function(){
-    console.log("Hello Final");
-});
-
+person.greet();
